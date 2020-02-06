@@ -1,0 +1,21 @@
+[package]
+name = "cloud"
+version = "0.1.0"
+authors = ["Akshay Narayan <akshayn@mit.edu>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+failure = "0.1"
+itertools = "0.8"
+lazy_static = "1"
+rayon = "1"
+regex = "1"
+rusoto_core = "0.40"
+serde = { version = "1", features = ["derive"]}
+serde_json = "1"
+slog = { version = "2", features = ["max_level_trace"] }
+slog-term = "2"
+structopt = "0.2"
+tsunami = {path = "../tsunami"}
