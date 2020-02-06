@@ -96,7 +96,7 @@ pub fn start_alg(name: &str, sender_home: &str) -> (Option<String>, String) {
         ),
         "nimbus" => (
             Some(format!(
-                "screen -d -m bash -c \"cd {}/tools/nimbus && sudo ./target/release/nimbus --ipc=netlink --bw_est_mode=true xtcp_flows=1 --flow_mode=Delay --loss_mode=Cubic --uest=384 2>&1 > {}/nimbus.log\"",
+                "screen -d -m bash -c \"cd {}/tools/nimbus && sudo ./target/release/nimbus --ipc=netlink --bw_est_mode=true --xtcp_flows=1 --flow_mode=Delay --loss_mode=Cubic --uest=384 2>&1 > {}/nimbus.log\"",
                 sender_home, sender_home
             )),
             "ccp".to_string(),

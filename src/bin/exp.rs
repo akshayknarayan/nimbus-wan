@@ -37,13 +37,7 @@ fn main() -> Result<(), Error> {
             user: "ubuntu",
         };
 
-        cloud::aws_to_local(
-            "cubic",
-            std::path::Path::new(&format!("./{}", name)),
-            &log,
-            &node,
-        )
-        .unwrap_or_else(|_| {
+        cloud::aws_to_local("cubic", std::path::Path::new("."), &log, &node).unwrap_or_else(|_| {
             slog::debug!(
                 &log,
                 "pausing for manual instance inspection, press enter to continue"
